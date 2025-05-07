@@ -84,13 +84,3 @@ RUN echo "export PATH=$PATH:/usr/local/go/bin:/opt/nvim-linux-x86_64/bin:~/.carg
   git clone https://github.com/FrodeUlr/NvimLazyVim.git ~/.config/nvim
 
 ENTRYPOINT ["tail", "-f", "/dev/null"]
-
-
-# Run this to get clipboard:
-# docker create \ 
-#  --name nvim \
-#  -e DISPLAY=$DISPLAY \
-#  -v /tmp/.X11-unix:/tmp/.X11-unix \
-#  -v nvim-home:/home/ubuntu \
-#  -it nvimtest
-
