@@ -2,7 +2,7 @@ PROJECT_NAME := nvim-docker
 
 .PHONY: all build create clean connect
 
-all: build
+all: create connect
 
 build: clean
 	@echo "Building Docker image..."
