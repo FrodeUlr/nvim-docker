@@ -23,3 +23,7 @@ clean:
 	@docker rmi $(PROJECT_NAME) || true
 	@docker volume rm nvim-home || true
 	@echo "Cleanup complete."
+
+export:
+	@echo "Exporting Docker container..."
+	@docker export $(PROJECT_NAME) > $(PROJECT_NAME).tar
