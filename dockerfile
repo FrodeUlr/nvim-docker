@@ -112,6 +112,10 @@ RUN luarocks install tiktoken_core && \
   luarocks install jsregexp && \
   cargo install --root /usr/local viu
 
+# Default to the `ubuntu` user when this image is exported and imported into WSL
+# (WSL otherwise logs in as root). `wsl --import` reads this on first launch.
+RUN printf '[user]\ndefault=ubuntu\n' > /etc/wsl.conf
+
 USER ubuntu
 WORKDIR /home/ubuntu
 
